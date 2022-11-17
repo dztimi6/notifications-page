@@ -1,0 +1,198 @@
+:root {
+  /* Primary color */
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+
+  /* Neutral color */
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+
+  /* Font */
+  --ff: "Plus Jakarta Sans", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-light-grayish-blue);
+  font-family: var(--ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  line-height: 0;
+  max-width: 100%;
+}
+
+p {
+  font-size: 0.813rem;
+  color: var(--dark-grayish-blue);
+  line-height: 1.5;
+}
+
+main {
+  width: min(43%, 70rem);
+  background-color: var(--white);
+  box-shadow: 1px 1px 6px var(--grayish-blue);
+  border-radius: 1rem;
+  margin: 2rem;
+}
+
+.notification-page {
+  padding: 1.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.header p {
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 1rem;
+}
+
+.num {
+  background-color: var(--blue);
+  padding: auto 1rem;
+  border-radius: 0.25rem;
+}
+
+#notification-number {
+  font-size: 1rem;
+  font-weight: 800;
+  background-color: var(--blue);
+  padding: 0.125rem 0.668rem;
+  color: var(--white);
+  border-radius: 6px;
+  margin-left: 5px;
+}
+
+.notification {
+  display: flex;
+  column-gap: 0.7rem;
+  padding: 1rem;
+  margin-top: 0.6rem;
+}
+
+.text {
+  width: 100%;
+}
+
+.sign {
+  width: 8px;
+  height: 8px;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.avatar-img,
+.chess-img {
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.avatar-img img,
+.chess-img img {
+  width: 100%;
+}
+
+.unread {
+  border-radius: 0.5rem;
+  background-color: var(--light-grayish-blue-1);
+}
+
+.name {
+  font-weight: 800;
+  color: var(--very-dark-blue);
+}
+
+.chess {
+  font-weight: 800;
+  color: var(--blue);
+}
+
+.gray-blue {
+  font-weight: 800;
+}
+
+#read-all-btn:hover,
+.gray-blue:hover,
+.chess:hover,
+.name:hover {
+  cursor: pointer;
+  color: var(--blue);
+}
+
+.private-message {
+  border-radius: 0.125rem;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  box-shadow: 1px 1px 6px var(--grayish-blue);
+}
+
+.private-message:hover {
+  cursor: pointer;
+  background-color: var(--light-grayish-blue-1);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 33rem) {
+  main {
+    width: min(100%, 70rem);
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0.5rem auto;
+  }
+
+  .header h1,
+  #notification-number {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.984rem;
+  }
+
+  .notification-page {
+    padding: 1rem;
+  }
+
+  .avatar-img,
+  .chess-img {
+    width: 3.25rem;
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 60rem) {
+  main {
+    width: min(90%, 70rem);
+    background-color: var(--white);
+    box-shadow: 1px 1px 6px var(--grayish-blue);
+    border-radius: 1rem;
+    /* margin: 2rem; */
+  }
+}
